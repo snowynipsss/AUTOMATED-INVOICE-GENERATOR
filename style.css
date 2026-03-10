@@ -1,0 +1,96 @@
+body{
+    background:black;
+    color:#00ff9c;
+    font-family:Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:950px;
+    background:#0a0a0a;
+    border:2px solid #00ff9c;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 15px #00ff9c;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.main{
+    display:flex;
+    gap:30px;
+}
+
+.form{
+    width:40%;
+}
+
+.form input, .form select{
+    width:100%;
+    padding:6px;
+    margin:6px 0;
+    background:black;
+    color:#00ff9c;
+    border:1px solid #00ff9c;
+}
+
+button{
+    padding:6px 12px;
+    margin-top:6px;
+    background:black;
+    color:#00ff9c;
+    border:1px solid #00ff9c;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00ff9c;
+    color:black;
+}
+
+.invoice{
+    width:60%;
+}
+
+#invoiceBox{
+    border:1px solid #00ff9c;
+    padding:15px;
+    white-space:pre;
+}
+
+.salesBox{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.history{
+    margin-top:10px;
+    border-top:1px solid #00ff9c;
+    padding-top:10px;
+    max-height:120px;
+    overflow:auto;
+    font-size:12px;
+}
+
+.delete-section{
+    margin-top:20px;
+}
+
+.qtyBtns{
+    display:flex;
+    gap:5px;
+    margin-top:5px;
+}
+
+#changeQty{
+    width:60px;
+    background:black;
+    color:#00ff9c;
+    border:1px solid #00ff9c;
+}
