@@ -30,7 +30,7 @@ let date=new Date().toLocaleString();
 
 let output=
 "=====================================\n"+
-"        AUTOMATED INVOICE SYSTEM\n"+
+"        AUTOMATED INVOICE GENERATOR\n"+
 "=====================================\n\n"+
 "Invoice No: "+invoiceNumber+"\n"+
 "Date: "+date+"\n"+
@@ -205,4 +205,5 @@ if(e.key==="Enter") document.getElementById("qty").focus();
 document.getElementById("qty").addEventListener("keypress",function(e){
 if(e.key==="Enter") addItem();
 });
+
 
