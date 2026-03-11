@@ -190,8 +190,6 @@ win.print();
 
 }
 
-/* ENTER KEY NAVIGATION */
-
 document.getElementById("customer").addEventListener("keypress",function(e){
 if(e.key==="Enter") document.getElementById("item").focus();
 });
@@ -207,3 +205,4 @@ if(e.key==="Enter") document.getElementById("qty").focus();
 document.getElementById("qty").addEventListener("keypress",function(e){
 if(e.key==="Enter") addItem();
 });
+
