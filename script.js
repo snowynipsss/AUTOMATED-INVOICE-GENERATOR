@@ -2,6 +2,8 @@ let items=[];
 let invoiceNumber=1;
 let totalSales=0;
 
+let invoiceHistory=[];
+
 function addItem(){
 
 let name=document.getElementById("item").value;
@@ -71,12 +73,45 @@ function saveInvoice(){
 let text=document.getElementById("invoiceBox").textContent;
 if(!text) return;
 
+invoiceHistory.push({
+number: invoiceNumber,
+content: text
+});
+
 let history=document.getElementById("historyList");
 
-let div=document.createElement("div");
-div.textContent="Invoice "+invoiceNumber;
+let row=document.createElement("div");
+row.style.display="flex";
+row.style.justifyContent="space-between";
+row.style.marginTop="5px";
 
-history.appendChild(div);
+let label=document.createElement("span");
+label.textContent="Invoice "+invoiceNumber;
+
+let viewBtn=document.createElement("button");
+viewBtn.textContent="View";
+
+/* SMALL VIEW BUTTON */
+viewBtn.style.fontSize="11px";
+viewBtn.style.padding="2px 6px";
+viewBtn.style.width="45px";
+viewBtn.style.height="22px";
+viewBtn.style.cursor="pointer";
+
+/* OPEN INVOICE IN NEW TAB */
+viewBtn.onclick=function(){
+
+let win=window.open("","_blank");
+
+win.document.write("<pre>"+text+"</pre>");
+win.document.title="Invoice "+invoiceNumber;
+
+};
+
+row.appendChild(label);
+row.appendChild(viewBtn);
+
+history.appendChild(row);
 
 let subtotal=0;
 
@@ -176,6 +211,9 @@ document.getElementById("invoiceBox").textContent="";
 
 document.getElementById("deleteItemSelect").innerHTML='<option value="">-- Select Item --</option>';
 
+totalSales = 0;
+document.getElementById("totalSales").textContent = "0.00";
+
 }
 
 function printInvoice(){
@@ -205,5 +243,3 @@ if(e.key==="Enter") document.getElementById("qty").focus();
 document.getElementById("qty").addEventListener("keypress",function(e){
 if(e.key==="Enter") addItem();
 });
-
-
