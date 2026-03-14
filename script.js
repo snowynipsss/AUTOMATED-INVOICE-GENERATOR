@@ -38,7 +38,7 @@ let output=
 "Date: "+date+"\n"+
 "Customer: "+customer+"\n"+
 "-------------------------------------\n"+
-"Item        Price      Qty      Total\n"+
+"Item        Price     Qty      Total\n"+
 "-------------------------------------\n";
 
 let subtotal=0;
