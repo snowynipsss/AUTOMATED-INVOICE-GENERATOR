@@ -50,7 +50,7 @@ subtotal+=total;
 
 output+=item.name.padEnd(12)+
 ("₱"+item.price.toFixed(2)).padEnd(10)+
-item.qty.toString().padEnd(10)+
+item.qty.toString().padEnd(8)+
 ("₱"+total.toFixed(2))+"\n";
 
 });
