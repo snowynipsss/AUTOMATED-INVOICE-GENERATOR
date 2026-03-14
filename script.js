@@ -38,7 +38,7 @@ let output=
 "Date: "+date+"\n"+
 "Customer: "+customer+"\n"+
 "-------------------------------------\n"+
-"Item        Price     Qty      Total\n"+
+"Item        Price      Qty      Total\n"+
 "-------------------------------------\n";
 
 let subtotal=0;
@@ -50,7 +50,7 @@ subtotal+=total;
 
 output+=item.name.padEnd(12)+
 ("₱"+item.price.toFixed(2)).padEnd(10)+
-item.qty.toString().padEnd(8)+
+item.qty.toString(2).padEnd(10)+
 ("₱"+total.toFixed(2))+"\n";
 
 });
